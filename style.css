@@ -1,0 +1,24 @@
+/* CSS Document */
+#player {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 640px;
+	height: 480px;
+	margin: auto;
+}
+#video {
+	visibility: visible;
+	display: block;
+	position: absolute;
+	width: 100%;
+	min-width: 320px;
+	min-height: 240px;
+	max-height:480px;
+	max-width: 640px;
+}
+#resources {
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+}

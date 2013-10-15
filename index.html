@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<script src="jquery.min.js"></script> 
+<script src="popcorn.js"></script> 
+<script src="popcorn.pause.js"></script> 
+  <script> 
+   var output;
+ 
+   document.addEventListener('DOMContentLoaded', function () {
+     var p = Popcorn( '#video' , { pauseOnLinkClicked : true } )
+         .play();
+    }, false);
+  </script> 
+  <script src="popcorn.footnote.js"></script> 
+  <script src="popcorn.show.js"></script> 
+  <script src="popcorn.options.js"></script> 
+  <script> 
+  	document.addEventListener('DOMContentLoaded', function () {
+      var p = Popcorn('#video')
+     .play() 
+      .footnote({
+        start: 0, // seconds
+        end: 5, // seconds
+        text: '<a href="javascript:goto();" >Go to gizmo!</a>',
+        target: 'footnote'
+      } )
+	  .footnote({
+        start: 7, // seconds
+        end: 10, // seconds
+        text: '<a href="javascript:showme();" >Show Me</a>',
+        target: 'footnote'
+      } )
+	  .show({
+        start: 2, // seconds
+        end: 4, // seconds
+        target: 'show1'
+      } )
+	  .show({
+        start: 4, // seconds
+        end: 8, // seconds
+        target: 'show1_1'
+      } )
+	  .show({
+        start: 4, // seconds
+        end: 10, // seconds
+        target: 'show2'
+      } )
+	  .option({
+        start: 12, // seconds
+        text: 'You want to continue!'
+      } );
+
+    }, false);
+ 	
+	function goto(){
+		$($('video').children()[0]).attr('src','gizmo.mp4');
+		var p = Popcorn('#video')
+		.load()
+    	.play();
+	}
+	function showme(){
+		alert("Yeah! it's my");
+	}
+  </script>
+    <link rel="stylesheet" href="style.css" id="main-style">
+</head>
+
+<body>
+<div id="player"> 
+  <video id="video" controls preload autoplay>
+   <source src="z-pilar.mp4"  type='video/mp4'>
+  </video>
+  <div id="resources">
+      <div class="show1" id="show1" style="width: 17%; display: none; position: absolute; top: 4%; left: 36%;">
+        <div style="position: relative;"><img style="height:300px;" src="1.jpg"></div>
+      </div>
+      <div class="show1_1" id="show1_1" style="width: 17%; display: none; position: absolute; top: 5%; left: 37%;">
+        <div style="position: relative;"><a href="javascript:alert('a');"><img style="height:300px;" src="1.jpg"></a></div>
+      </div>
+      <div class="show2" id="show2" style="width: 17%; display: none; position: absolute; top: 4%; left: 4%;">
+        <div style="position: relative;">
+        	<h1>Welcome vietname!</h1>
+            <p>type your text here</p>
+            <a href="javascript:goto();">Play other</a>
+        </div>
+      </div>
+  </div>
+  </div>
+  <br clear="all">
+  <div id="footnote" style="background-color:#000; line-height:50px;">a</div>
+</body>
+</html>
