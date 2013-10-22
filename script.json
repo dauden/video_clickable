@@ -102,7 +102,7 @@
 						[{		
 							"text": "yes",
 							"action": "play",
-							"src": "gizmo.mp4"
+							"src": "http://player.vimeo.com/video/22328299"
 						},
 						{
 							"text": "no",

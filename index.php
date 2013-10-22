@@ -41,10 +41,11 @@
 		}
 	}
 ?>
-  <script> 
+  <script>
+  	var p; 
   	document.addEventListener('DOMContentLoaded', function () {
-      var p = Popcorn('#video')
-     .play() 
+     p = Popcorn.vimeo('#video','http://player.vimeo.com/video/10236497');
+     p.play()
 	 <?php 
 	 foreach($print_object as $obj){
 	 	echo "
@@ -60,10 +61,9 @@
     }, false);
  	
 	function play(src){
-		$($('video').children()[0]).attr('src',src);
-		var p = Popcorn('#video')
-		.load()
-    	.play();
+		p.media.src = src;
+		//var p = Popcorn.vimeo('#video',src);
+     	p.play()
 	}
 	function showme(){
 		alert("Yeah! it's my");
@@ -74,9 +74,8 @@
 
   <body>
 <div id="player">
-    <video id="video" controls preload autoplay>
-    <source src="z-pilar.mp4"  type='video/mp4'>
-  </video>
+    <div id="video">
+    </div>
     <div id="resources">
      <?php 
 	 foreach($print_text as $obj){
