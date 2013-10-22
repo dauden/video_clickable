@@ -1,0 +1,121 @@
+{
+	"nodes":
+		[
+			{
+				"type": "Fade In Out Node",
+				"id": 1,
+				"data": 
+				[{
+					"id":1,
+					"layout": 
+					{
+						"width": "77%",
+						"height": "12%" ,
+						"top": "24%", 
+						"left": "24%"
+					},
+					"time": 
+					{
+						"start": 0,
+						 "end": 6
+					},
+					"style": "color: red; font-size: 20px",
+					"text": "Well come Video Clickable"
+				},
+				{
+					"id":2,
+					"layout": 
+					{
+						"width": "77%",
+						"height": "12%" ,
+						"top": "28%", 
+						"left": "24%"
+					},
+					"time": 
+					{
+						"start": 2,
+						 "end": 6
+					},
+					"style": "color: blue; font-size: 25px",
+					"text": "The demo using html5 and popcorn js"
+				},
+				{
+					"id":3,
+					"layout": 
+					{
+						"width": "37%",
+						"height": "12%" ,
+						"top": "34%", 
+						"left": "24%"
+					},
+					"time": 
+					{
+						"start": 4,
+						 "end": 6
+					},
+					"style": "color: blue; font-size: 25px",
+					"text": "It's just that simple"
+				}]
+			},
+			{
+				"type": "Dilemma Node",
+				"id": 2,
+				"data": 
+				[{
+					"id": 1,
+					"time": 
+					{
+						"start": 10,
+						 "end": 14
+					},
+					"style": "color: blue; font-size: 25px",
+					"text": "Do you want to continue?",
+					"layout": 
+					{
+						"width": "47%",
+						"height": "12%" ,
+						"top": "34%", 
+						"left": "34%"
+					}
+				}]
+			},
+			{
+				"type": "Choice Node",
+				"id": 3,
+				"data": 
+					[{
+						"id": 1,
+						"time": 
+						{
+							"start": 12,
+							 "end": 14
+						},
+						"layout": 
+						{
+							"width": "50%",
+							"height": "20%" ,
+							"top": "44%", 
+							"left": "44%"
+						},
+						"style": "color: blue; font-size: 25px",
+						"options":
+						[{		
+							"text": "yes",
+							"action": "play",
+							"src": "gizmo.mp4"
+						},
+						{
+							"text": "no",
+							"action": "stop",
+							"src": null 
+						},
+						{
+							"text": "No! I want to go to amazon",
+							"action": "url",
+							"src": "http://www.amazon.com"
+						}
+						]
+					}]
+			}
+		]
+}

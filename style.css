@@ -14,8 +14,8 @@
 	width: 100%;
 	min-width: 320px;
 	min-height: 240px;
-	max-height:480px;
-	max-width: 640px;
+	height:480px;
+	width: 640px;
 }
 #resources {
 	width: 100%;
